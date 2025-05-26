@@ -19,6 +19,6 @@ def get_chars(word):
 
 def sorted_dict(input):
     sorted_list = [{"char": k, "num": v} for k, v in input.items()]
-    print(sorted_list)
+    sort = sorted(sorted_list, key=lambda x: x["num"], reverse=True)
 
-sorted_dict({"hello": 1, "goodbye": 10, "howdy": 10})
+    return sort
