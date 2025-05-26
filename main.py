@@ -7,7 +7,7 @@ if not len(sys.argv) == 2:
 
 def main():
     print("============ BOOKBOT ============")
-    book = get_book_text("")
+    book = get_book_text(sys.argv[1])
     print("Analyzing book found at books/frankenstein.txt...")
     print("----------- Word Count ----------")
     words = get_words(book)
