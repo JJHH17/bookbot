@@ -1,9 +1,9 @@
-from stats import get_words, get_chars
+from stats import get_words, get_chars, sorted_dict
 
 def main():
     book = get_book_text("./books/frankenstein.txt")
     chars = get_chars(book)
-    get_words(book)
+    char_nums = sorted_dict(chars)
     print(chars)
 
 def get_book_text(filepath):

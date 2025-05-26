@@ -18,11 +18,7 @@ def get_chars(word):
     return frequency
 
 def sorted_dict(input):
-    sorted_dict = {}
+    sorted_list = [{"char": k, "num": v} for k, v in input.items()]
+    print(sorted_list)
 
-    for x in input.values():
-        sorted_dict.update(input)
-
-    sorted_nums = sorted(sorted_dict.items(), key=lambda x:x[1])
-    return sorted_nums
-
+sorted_dict({"hello": 1, "goodbye": 10, "howdy": 10})
