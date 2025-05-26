@@ -1,8 +1,13 @@
+import sys
 from stats import get_words, get_chars, sorted_dict
+
+if not len(sys.argv) == 2:
+    print("Usage: python3 main.py <path_to_book>")
+    sys.exit(1)
 
 def main():
     print("============ BOOKBOT ============")
-    book = get_book_text("./books/frankenstein.txt")
+    book = get_book_text("")
     print("Analyzing book found at books/frankenstein.txt...")
     print("----------- Word Count ----------")
     words = get_words(book)
